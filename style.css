@@ -1,0 +1,142 @@
+:root{
+  --primeryFont: "Fraunces", serif;
+  --seconderyFont: "Montserrat", sans-serif;
+
+  --Darkcyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+
+  --Verydarkblue: hsl(212, 21%, 14%);
+  --DarkGrayishBlue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+
+
+body{
+  background-color: var(--Cream);
+  font-family: var(--seconderyFont);
+  color: var(--DarkGrayishBlue);
+  font-size: 14px;
+  font-weight: 500;
+}
+main{
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.container{
+  background-color: var(--White);
+  min-width: 300px;
+  margin: 10px;
+  /* width: 90%; */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.content{
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.product{
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.productName{
+  color: var(--Verydarkblue);
+  font-family: var(--primeryFont);
+  line-height: 1;
+  font-weight: 700;
+  font-size: 32px;
+}
+.description{
+  line-height: 1.5;
+}
+
+.price{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.priceAfter{
+  font-family: var(--primeryFont);
+  color: var(--Darkcyan);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 14px;
+  gap: 10px;
+  background-color: var(--Darkcyan);
+  color: var(--White);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: var(--Verydarkblue);
+}
+
+@media (width >= 600px){
+  .container{
+    display: flex;
+    width: 600px;
+  }
+  .productName{
+    font-size: 36px;
+  }
+  picture{
+    width: 50%;
+  }
+  .content{
+    width: 50%;
+  }
+}
